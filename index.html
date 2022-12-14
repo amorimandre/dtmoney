@@ -13,9 +13,25 @@
                     ><div class="logo-img">
                         <img src="assets/images/logo.png" alt="" /></div
                 ></a>
-                <div class="new">Nova transação</div>
+                <div id="new" class="new">Nova transação</div>
             </div>
         </header>
+        <dialog open>
+            <img src="assets/images/fechar.png" id="close-modal" />
+            <h2>Cadastrar transação</h2>
+            <form>
+                <input id="name-in" type="text" placeholder="Nome" />
+                <input id="price-in" type="number" placeholder="Preço" />
+                <div class="radio-group">
+                    <input class="radio-in" id="radio-in" type="radio" name="theradio" />
+                    <label id="radio-in-label" for="radio-in"><img src="assets/images/entradas.png" /><span>Entrada</span></label>
+                    <input class="radio-out" id="radio-out" type="radio" name="theradio" />
+                    <label id="radio-out-label" for="radio-out"><img src="assets/images/saídas.png" /><span>Saída</span></label>
+                </div>
+                <input id="category-in" type="text" placeholder="Categoria" />
+                <input id="register-btn" type="button" value="Cadastrar" />
+            </form>
+        </dialog>
         <main>
             <section class="cards-area">
                 <div class="cards container">
@@ -66,5 +82,6 @@
                 </div>
             </section>
         </main>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>
