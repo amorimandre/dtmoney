@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --blue: #5429cc;
+    --green: #33cc95;
+    --red: #e62e4d;
+    --white: #fff;
+    --titles: #363f5f;
+    --texts: #969cb3;
+    --background: #f0f2f5;
+}
+
+.container {
+    max-width: 1120px;
+}
+body {
+    background-color: var(--background);
+}
+
+header {
+    background-color: var(--blue);
+    padding: 36px 0 64px 0;
+    & .logo-area {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 24px;
+
+        & .logo-img {
+            align-items: center;
+            display: flex;
+        }
+        & .new {
+            align-items: center;
+            background-color: #6933ff;
+            border: 2px solid #6933ff;
+            border-radius: 5px;
+            color: var(--white);
+            display: flex;
+            font-size: 16px;
+            padding: 12px 32px;
+            &:hover {
+                background-color: #6c38fc;
+                border: 2px solid var(--blue);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+main {
+    & .cards-area {
+        background: var(--blue);
+        background: linear-gradient(180deg, var(--blue) 50%, #f0f2f5 50%);
+        & .cards {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+            height: 135px;
+            gap: 32px;
+
+            %card-default {
+                height: 100%;
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                padding: 25px 20px 15px 32px;
+                border-radius: 5px;
+                justify-content: space-between;
+                & .title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & span {
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+                }
+                & .content {
+                    & span {
+                        font-size: 36px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            & .cardin {
+                @extend %card-default;
+                background-color: var(--white);
+                color: var(--titles);
+            }
+            & .cardout {
+                @extend %card-default;
+                background-color: var(--white);
+                color: var(--titles);
+            }
+            & .cardtotal {
+                @extend %card-default;
+                background-color: var(--green);
+                color: var(--white);
+            }
+        }
+    }
+    & .transactions {
+        padding: 64px 0 0 0;
+        & .transaction-list {
+            margin: 0 auto;
+            & .transaction-title {
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 3fr 1fr 1fr 1fr;
+                color: var(--texts);
+                font-weight: 400;
+                font-size: 16px;
+                margin-bottom: 20px;
+                & span {
+                    padding-left: 32px;
+                }
+            }
+            & .transaction {
+                display: grid;
+                grid-template-columns: 3fr 1fr 1fr 1fr;
+                background-color: var(--white);
+                padding: 20px 0;
+                border-radius: 5px;
+                & .title {
+                    padding-left: 32px;
+                    color: var(--titles);
+                }
+                & .price {
+                    padding-left: 32px;
+                    &.income {
+                        color: var(--green);
+                    }
+                    &.outcome {
+                        color: var(--red);
+                    }
+                }
+                & .category {
+                    padding-left: 32px;
+                    color: var(--texts);
+                }
+                & .date {
+                    padding-left: 32px;
+                    color: var(--texts);
+                }
+            }
+        }
+    }
+}
