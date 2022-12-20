@@ -41,7 +41,7 @@ header {
         & .new {
             align-items: center;
             background-color: #6933ff;
-            border: 2px solid #6933ff;
+            border: 1px solid var(--blue);
             border-radius: 5px;
             color: var(--white);
             display: flex;
@@ -49,7 +49,7 @@ header {
             padding: 12px 32px;
             &:hover {
                 background-color: #6c38fc;
-                border: 2px solid var(--blue);
+                border: 1px solid #6c38fc;
                 cursor: pointer;
             }
         }
@@ -60,9 +60,13 @@ dialog {
     margin: -20px auto;
     border: none;
     border-radius: 5px;
-    height: 576px;
+    min-height: 576px;
     width: 588px;
+    top: 15%;
     background-color: var(--background);
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
     & #close-modal {
         position: absolute;
         right: 21px;
@@ -117,12 +121,18 @@ dialog {
             }
             & .radio-in {
                 @extend %radio-default;
+                &[type="radio"]:checked + #radio-in-label {
+                    background-color: #33cc9434;
+                }
             }
             & #radio-in-label {
                 @extend %label-default;
             }
             & .radio-out {
                 @extend %radio-default;
+                &[type="radio"]:checked + #radio-out-label {
+                    background-color: #e62e4d3d;
+                }
             }
             & #radio-out-label {
                 @extend %label-default;
@@ -221,6 +231,7 @@ main {
                 background-color: var(--white);
                 padding: 20px 0;
                 border-radius: 5px;
+                margin-bottom: 8px;
                 & .title {
                     padding-left: 32px;
                     color: var(--titles);
