@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>dt money</title>
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     </head>
     <body>
         <header>
@@ -17,16 +20,16 @@
             </div>
         </header>
         <dialog id="modal">
-            <img src="assets/images/fechar.png" id="close-modal" />
+            <img src="assets/images/close.png" id="close-modal" />
             <h2>Cadastrar transação</h2>
             <form>
                 <input id="name-in" type="text" placeholder="Nome" />
                 <input id="price-in" type="number" placeholder="Preço" />
                 <div class="radio-group">
                     <input class="radio-in" id="radio-in" type="radio" name="theradio" />
-                    <label id="radio-in-label" for="radio-in"><img src="assets/images/entradas.png" /><span>Entrada</span></label>
+                    <label id="radio-in-label" for="radio-in"><img src="assets/images/in.png" /><span>Entrada</span></label>
                     <input class="radio-out" id="radio-out" type="radio" name="theradio" />
-                    <label id="radio-out-label" for="radio-out"><img src="assets/images/saídas.png" /><span>Saída</span></label>
+                    <label id="radio-out-label" for="radio-out"><img src="assets/images/out.png" /><span>Saída</span></label>
                 </div>
                 <input id="category-in" type="text" placeholder="Categoria" />
                 <input id="register-btn" type="button" value="Cadastrar" />
@@ -38,7 +41,7 @@
                     <div class="cardin">
                         <div class="title">
                             <span>Entradas</span>
-                            <img src="assets/images/entradas.png" alt="" />
+                            <img src="assets/images/in.png" />
                         </div>
                         <div class="content">
                             <span id="cardin">R$ 0,00 </span>
@@ -47,7 +50,7 @@
                     <div class="cardout">
                         <div class="title">
                             <span>Saídas</span>
-                            <img src="assets/images/saídas.png" alt="" />
+                            <img src="assets/images/out.png" />
                         </div>
                         <div class="content">
                             <span id="cardout">R$ 0,00 </span>
@@ -56,7 +59,7 @@
                     <div class="cardtotal">
                         <div class="title">
                             <span>Total</span>
-                            <img src="assets/images/total.png" alt="" />
+                            <img src="assets/images/total.png" />
                         </div>
                         <div class="content">
                             <span id="cardtotal">R$ 0,00 </span>

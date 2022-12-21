@@ -76,7 +76,6 @@ registerBtn.addEventListener("click", () => {
         tprice_el.classList.add("price");
 
         if (radioInput.checked) {
-            console.log("blz mané");
             tprice_el.classList.remove("outcome");
             tprice_el.classList.add("income");
             tprice_el.innerText = formatPrice(priceInput.value.replace("-", ""));
@@ -121,8 +120,6 @@ registerBtn.addEventListener("click", () => {
         total = incomes - outcomes;
 
         cardtotal.innerText = formatPrice(total);
-
-        console.log(total);
 
         if (total >= 0) {
             cardt.style.background = "var(--green)";

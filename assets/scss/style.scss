@@ -1,24 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
+    --background: #f0f2f5;
     --blue: #5429cc;
     --green: #33cc95;
     --red: #e62e4d;
-    --white: #fff;
     --titles: #363f5f;
     --texts: #969cb3;
-    --background: #f0f2f5;
+    --white: #fff;
 }
 
 .container {
-    max-width: 1120px;
+    max-width: 70rem;
 }
 body {
     background-color: var(--background);
@@ -26,13 +24,13 @@ body {
 
 header {
     background-color: var(--blue);
-    padding: 36px 0 64px 0;
+    padding: 2.25rem 0 4rem 0;
     & .logo-area {
         align-items: center;
         display: flex;
         justify-content: space-between;
         margin: 0 auto;
-        padding: 0 24px;
+        padding: 0 1.5rem;
 
         & .logo-img {
             align-items: center;
@@ -45,8 +43,8 @@ header {
             border-radius: 5px;
             color: var(--white);
             display: flex;
-            font-size: 16px;
-            padding: 12px 32px;
+            font-size: 1rem;
+            padding: 0.75rem 2rem;
             &:hover {
                 background-color: #6c38fc;
                 border: 1px solid #6c38fc;
@@ -57,41 +55,41 @@ header {
 }
 
 dialog {
-    margin: -20px auto;
+    background-color: var(--background);
     border: none;
     border-radius: 5px;
-    min-height: 576px;
-    width: 588px;
+    margin: -1.25rem auto;
+    min-height: 36rem;
     top: 15%;
-    background-color: var(--background);
+    width: 36.75rem;
     &::backdrop {
         background-color: rgba(0, 0, 0, 0.5);
     }
     & #close-modal {
-        position: absolute;
-        right: 21px;
-        top: 21px;
         cursor: pointer;
+        position: absolute;
+        right: 1.25rem;
+        top: 1.25rem;
     }
     & h2 {
-        padding-top: 64px;
-        padding-left: 48px;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
+        padding-left: 3rem;
+        padding-top: 4rem;
     }
     & form {
         display: flex;
         flex-direction: column;
-        padding: 32px 48px 64px 48px;
-        gap: 16px;
+        gap: 1rem;
+        padding: 2rem 3rem 4rem 3rem;
         %input-default {
-            padding: 20px 24px 20px 24px;
+            background-color: #e7e9ee;
             border: 1px solid #d7d7d7;
             border-radius: 5px;
             color: var(--titles);
             outline: none;
+            padding: 1.25rem 1.5rem 1.25rem 1.5rem;
             width: 100%;
-            background-color: #e7e9ee;
             &::placeholder {
                 color: var(--texts);
             }
@@ -104,20 +102,20 @@ dialog {
         }
         & .radio-group {
             display: grid;
+            gap: 0.5rem;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
             %radio-default {
                 display: none;
             }
             %label-default {
-                padding: 20px 65px;
-                border: 1px solid #d7d7d7;
-                display: flex;
-                justify-content: center;
                 align-items: center;
-                gap: 18px;
+                border: 1px solid #d7d7d7;
                 border-radius: 5px;
                 cursor: pointer;
+                display: flex;
+                gap: 1.125rem;
+                justify-content: center;
+                padding: 1.25rem 4rem;
             }
             & .radio-in {
                 @extend %radio-default;
@@ -144,9 +142,9 @@ dialog {
         & #register-btn {
             @extend %input-default;
             background-color: var(--green);
+            border: 1px solid var(--background);
             color: var(--white);
             text-align: center;
-            border: 1px solid var(--background);
             &:hover {
                 background-color: #51d1a2;
                 border: 1px solid #51d1a2;
@@ -158,36 +156,36 @@ dialog {
 
 main {
     & .cards-area {
-        background: var(--blue);
         background: linear-gradient(180deg, var(--blue) 50%, #f0f2f5 50%);
+        background: var(--blue);
         & .cards {
-            display: flex;
             align-items: center;
+            display: flex;
+            gap: 2rem;
+            height: 8.5rem;
             margin: 0 auto;
             width: 100%;
-            height: 135px;
-            gap: 32px;
 
             %card-default {
-                height: 100%;
-                width: 350px;
+                border-radius: 5px;
                 display: flex;
                 flex-direction: column;
-                padding: 25px 20px 15px 32px;
-                border-radius: 5px;
+                height: 100%;
                 justify-content: space-between;
+                padding: 1.5rem 1.25rem 1rem 2rem;
+                width: 22rem;
                 & .title {
+                    align-items: center;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
                     & span {
+                        font-size: 1rem;
                         font-weight: 400;
-                        font-size: 16px;
                     }
                 }
                 & .content {
                     & span {
-                        font-size: 36px;
+                        font-size: 2.25rem;
                         font-weight: 500;
                     }
                 }
@@ -210,34 +208,34 @@ main {
         }
     }
     & .transactions {
-        padding: 64px 0 0 0;
+        padding: 4rem 0 0 0;
         & .transaction-list {
             margin: 0 auto;
             & .transaction-title {
-                margin: 0 auto;
-                display: grid;
-                grid-template-columns: 3fr 1fr 1fr 1fr;
                 color: var(--texts);
+                display: grid;
+                font-size: 1rem;
                 font-weight: 400;
-                font-size: 16px;
-                margin-bottom: 20px;
+                grid-template-columns: 3fr 1fr 1fr 1fr;
+                margin: 0 auto;
+                margin-bottom: 1.25rem;
                 & span {
-                    padding-left: 32px;
+                    padding-left: 2rem;
                 }
             }
             & .transaction {
+                background-color: var(--white);
+                border-radius: 5px;
                 display: grid;
                 grid-template-columns: 3fr 1fr 1fr 1fr;
-                background-color: var(--white);
-                padding: 20px 0;
-                border-radius: 5px;
-                margin-bottom: 8px;
+                margin-bottom: 0.5rem;
+                padding: 1.25rem 0;
                 & .title {
-                    padding-left: 32px;
                     color: var(--titles);
+                    padding-left: 2rem;
                 }
                 & .price {
-                    padding-left: 32px;
+                    padding-left: 2rem;
                     &.income {
                         color: var(--green);
                     }
@@ -246,12 +244,12 @@ main {
                     }
                 }
                 & .category {
-                    padding-left: 32px;
                     color: var(--texts);
+                    padding-left: 2rem;
                 }
                 & .date {
-                    padding-left: 32px;
                     color: var(--texts);
+                    padding-left: 2rem;
                 }
             }
         }
